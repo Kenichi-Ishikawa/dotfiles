@@ -23,7 +23,7 @@ set expandtab
 set hidden
  
 "インクリメンタルサーチを行う
-set incsearch
+"set incsearch
  
 "行番号を表示する
 set number
@@ -37,6 +37,9 @@ set smarttab
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
+
+"小文字の検索で大文字も見つかるようにする(検索時に大文字小文字を無視する)
+set ignorecase
  
 " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>

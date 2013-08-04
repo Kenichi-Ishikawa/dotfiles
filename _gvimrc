@@ -2,7 +2,7 @@
 " 基本的な設定
 "----------
 set showtabline=2
-set transparency=5
+set transparency=40
 set imdisable
 set guioptions-=T
 set antialias
@@ -18,3 +18,11 @@ set lines=48
 " カラースキーム
 "----------
 colorscheme desert
+
+"----------
+" 日本語入力中にカーソルの色を変更する
+"----------
+if has('multi_byte_ime') || has('xim')
+    " 日本語入力ON時のカーソルの色を設定
+    highlight CursorIM guibg=Purple guifg=NONE
+endif
