@@ -1,0 +1,1 @@
+/Users/Kenichi_Ishikawa/dotfiles/_bashrc
