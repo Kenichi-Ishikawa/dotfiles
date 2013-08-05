@@ -23,7 +23,7 @@ set expandtab
 set hidden
  
 "インクリメンタルサーチを行う
-"set incsearch
+set incsearch
  
 "行番号を表示する
 set number
