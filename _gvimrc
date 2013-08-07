@@ -2,7 +2,7 @@
 " 基本的な設定
 "----------
 set showtabline=2
-set transparency=40
+set transparency=30
 set imdisable
 set guioptions-=T
 set antialias
@@ -17,7 +17,7 @@ set lines=48
 "----------
 " カラースキーム
 "----------
-colorscheme desert
+colorscheme blue
 
 "----------
 " 日本語入力中にカーソルの色を変更する
