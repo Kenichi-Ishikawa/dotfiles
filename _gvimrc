@@ -17,7 +17,7 @@ set lines=48
 "----------
 " カラースキーム
 "----------
-colorscheme blue
+colorscheme murphy
 
 "----------
 " 日本語入力中にカーソルの色を変更する
