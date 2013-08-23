@@ -1,25 +1,26 @@
 "--------------------------------------------------------------------------
-" vundle
-set nocompatible
+"" vundle
+"set nocompatible
+""
+"" Vundle
+""
+"filetype off
 "
-" Vundle
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"Bundle 'gmarik/vundle'
 "
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Vundle で管理するプラグインを書いていく
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-
-filetype plugin indent on
+"" Vundle で管理するプラグインを書いていく
+"Bundle 'gmarik/vundle'
+"Bundle 'bling/vim-airline'
+"" インデント可視化
+"Bundle 'Yggdroot/indentLine'
+"filetype plugin indent on
 
 
 "--------------------------------------------------------------------------
 " neobundle
 set nocompatible               " Be iMproved
-filetype off                   " Required!
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -27,32 +28,59 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'ujihisa/unite-locate'
+NeoBundle 'violetyk/cake.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'taglist.vim'
+NeoBundle 'ZenCoding.vim'
+NeoBundle 'ref.vim'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'The-NERD-Commenter'
+NeoBundle 'fugitive.vim'
+NeoBundle 'TwitVim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-localrc'
+NeoBundle 'dbext.vim'
+NeoBundle 'rails.vim'
+NeoBundle 'Gist.vim'
+NeoBundle 'motemen/hatena-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/unite-advent_calendar'
+NeoBundle 'open-browser.vim'
+NeoBundle 'ctrlp.vim'
+NeoBundle 'jelera/vim-javascript-syntax'
+" インデントの可視化
+NeoBundle "nathanaelkane/vim-indent-guides"
+" let g:indent_guides_enable_on_vim_startup = 1 2013-06-24 10:00 削除
+let s:hooks = neobundle#get_hooks("vim-indent-guides")
+function! s:hooks.on_source(bundle)
+  let g:indent_guides_guide_size = 4
+  IndentGuidesEnable " 2013-06-24 10:00 追記
+endfunction
+
+" Color Scheme
+NeoBundle 'altercation/vim-colors-solarized'
+" ...
+
 filetype plugin indent on     " Required!
+"
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 " Installation check.
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-  "finish
-endif
-
-"GitHubリポジトリにあるプラグインを利用場合
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'bling/vim-airline'
-
-"GitHub以外のGitリポジトリにあるプラグインを利用する場合
-NeoBundle 'git://git.wincent.com/command-t.git'
-
-"Git以外のリポジトリにあるプラグインをを利用する場合
-NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+NeoBundleCheck
 
 "--------------------
 " 基本的な設定
 "--------------------
 "新しい行のインデントを現在行と同じにする
-set autoindent
+"set autoindent
 
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/vimbackup
@@ -82,7 +110,7 @@ set number
 set showmatch
 
 "新しい行を作った時に高度な自動インデントを行う
-set smarttab
+"set smarttab
 
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
