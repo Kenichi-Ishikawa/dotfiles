@@ -1,24 +1,4 @@
 "--------------------------------------------------------------------------
-"" vundle
-"set nocompatible
-""
-"" Vundle
-""
-"filetype off
-"
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"Bundle 'gmarik/vundle'
-"
-"" Vundle で管理するプラグインを書いていく
-"Bundle 'gmarik/vundle'
-"Bundle 'bling/vim-airline'
-"" インデント可視化
-"Bundle 'Yggdroot/indentLine'
-"filetype plugin indent on
-
-
-"--------------------------------------------------------------------------
 " neobundle
 set nocompatible               " Be iMproved
 
@@ -55,6 +35,9 @@ NeoBundle 'ctrlp.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 " インデントの可視化
 NeoBundle "nathanaelkane/vim-indent-guides"
+" 構文チェック
+NeoBundle "scrooloose/syntastic"
+
 " let g:indent_guides_enable_on_vim_startup = 1 2013-06-24 10:00 削除
 let s:hooks = neobundle#get_hooks("vim-indent-guides")
 function! s:hooks.on_source(bundle)
@@ -80,7 +63,7 @@ NeoBundleCheck
 " 基本的な設定
 "--------------------
 "新しい行のインデントを現在行と同じにする
-"set autoindent
+set autoindent
 
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/vimbackup
