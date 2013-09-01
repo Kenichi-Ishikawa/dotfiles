@@ -50,7 +50,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 "----------
 " カラースキーム
 "----------
-colorscheme murphy
+colorscheme default
 
 " インデント
 set ts=4 sw=4 et
@@ -62,8 +62,6 @@ let g:indent_guides_color_change_percent = 20 "色の変化の幅（？）。パ
 " indent_guides_auto_colors = 0にすると反映される
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black guibg=blue ctermbg=1 "インデントの色
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey guibg=red ctermbg=2 "二段階目のインデントの色
-
-" ...
 
 filetype plugin indent on     " Required!
 "
