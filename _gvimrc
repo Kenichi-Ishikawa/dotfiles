@@ -1,4 +1,9 @@
 "----------
+" カラースキーム
+"----------
+colorscheme murphy
+
+"----------
 " 基本的な設定
 "----------
 set showtabline=2
@@ -13,11 +18,6 @@ set visualbell t_vb=
 set nowrapscan
 set columns=100
 set lines=48
-
-"----------
-" カラースキーム
-"----------
-colorscheme murphy
 
 "----------
 " 日本語入力中にカーソルの色を変更する

@@ -38,15 +38,26 @@ NeoBundle "nathanaelkane/vim-indent-guides"
 " 構文チェック
 NeoBundle "scrooloose/syntastic"
 
-" let g:indent_guides_enable_on_vim_startup = 1 2013-06-24 10:00 削除
-let s:hooks = neobundle#get_hooks("vim-indent-guides")
-function! s:hooks.on_source(bundle)
-  let g:indent_guides_guide_size = 4
-  IndentGuidesEnable " 2013-06-24 10:00 追記
-endfunction
+" lightline
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+
 
 " Color Scheme
 NeoBundle 'altercation/vim-colors-solarized'
+
+"----------
+" カラースキーム
+"----------
+colorscheme murphy
+
+" インデント
+set ts=4 sw=4 et
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 4
+
 " ...
 
 filetype plugin indent on     " Required!
