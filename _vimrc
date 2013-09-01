@@ -57,6 +57,11 @@ set ts=4 sw=4 et
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 4
+let g:indent_guides_auto_colors = 1 "autoにするとよく見えなかったので自動的に色付けするのはストップ
+let g:indent_guides_color_change_percent = 20 "色の変化の幅（？）。パーセンテージらしい
+" indent_guides_auto_colors = 0にすると反映される
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black guibg=blue ctermbg=1 "インデントの色
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey guibg=red ctermbg=2 "二段階目のインデントの色
 
 " ...
 
